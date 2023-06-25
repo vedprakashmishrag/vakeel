@@ -10,7 +10,7 @@ const app = express();
 import connectDB from './db/connectdb.js';
 const port = process.env.PORT || '3000';
 //const DATABASE_URL = process.env.DATABASE_URL || 'mongodb://localhost:27017';
-const DATABASE_URL = 'mongodb+srv://crims-ckvk-31:Iqon2lxpUr4reallyhappyFtoxL7@cluster0.wzekk.mongodb.net/?retryWrites=true&w=majority' || 'mongodb://localhost:27017';
+const DATABASE_URL = 'mongodburl' || 'mongodb://localhost:27017';
 // connect to mongoDB
 connectDB(DATABASE_URL);
 

@@ -1,2 +1,2 @@
 # vakeelkaro
-vakeelkaro repo
+vakeel repo

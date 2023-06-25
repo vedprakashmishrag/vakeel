@@ -1,0 +1,92 @@
+<%- include('./layouts/header.ejs') %>
+<%- include('./layouts/navbar-inner.ejs') %>
+<main id="main">
+    <div class="container">
+        <!-- ======= Breadcrumbs ======= -->
+        <section class="breadcrumbs">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h2>Update Profile</h2>
+                    <ol>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/dashboard">dashboard</a></li>
+                        <li>Update Profile page</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-lg-12 col-xl-11">
+                    <div class="card text-black shadow  mb-4 bg-body rounded">
+                        <div class="card-body">
+                            <div class="text-center">
+                                <h1>Update Personal Info.</h1>
+                            </div>
+
+                            <div class="row justify-content-center">
+                                <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+
+                                    <form class=" " method="POST" action="/update-profile" id="signup" enctype="multipart/form-data">
+  <input type="hidden" name="imgname" value="<%=image%>" /> 
+  <div class="d-flex flex-row align-items-center mb-4">
+    <img src="/images/<%=image%>" width="90" class="m-1 img-thumbnail" alt=" pic of <%=name%>"/>
+   
+   
+</div> 
+                                        <div class="d-flex flex-row align-items-center mb-4">
+                                            
+                                            <div class="form-outline flex-fill mb-0 form-field">
+                                               
+                                               
+                                                <label class="form-label" for="customFile">Change Profile Pic</label>
+                                                <input type="file" name="image" class="form-control" id="customFile" />
+                                                <small>Old pic will be deleted</small>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-row align-items-center mb-4">
+                                            <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                                            <div class="form-outline flex-fill mb-0 form-field">
+                                                <label class="form-label" for="name">Your Name</label>
+                                                <input type="text" id="name" name="name" class="form-control"
+                                                   value="<%=name%>"/>
+                                                <small></small>
+                                            </div>
+                                        </div>
+
+                                        <div class="d-flex flex-row align-items-center mb-4">
+                                            <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                                            <div class="form-outline flex-fill mb-0 form-field">
+                                                <label class="form-label" for="email">Your
+                                                    Email</label>
+                                                <input type="email" id="email" name="email" class="form-control"
+                                                    value="<%=email %>"  />
+                                                <small></small>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-row align-items-center mb-4">
+                                            <i class="fas fa-phone fa-lg me-3 fa-fw"></i>
+                                            <div class="form-outline flex-fill mb-0 form-field">
+                                                <label class="form-label" for="phone">Your
+                                                    Phone</label>
+                                                <input type="number" id="phone" name="phone" class="form-control" value="<%=phone %>"/>
+                                                <small></small>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4 form-field">
+                                            <button type="submit" class="btn btn-primary btn-lg">Update</button>
+                                        </div>
+
+                                    </form>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </div>
+</main>
+<%- include('./layouts/footer.ejs') %> 

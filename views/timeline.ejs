@@ -1,0 +1,64 @@
+ <%- include('./layouts/header.ejs') %>
+
+ <%- include('./layouts/navbar.ejs') %>
+ <div class="container">
+     <!-- ======= Breadcrumbs ======= -->
+     <section class="breadcrumbs">
+         <div class="container">
+
+             <div class="d-flex justify-content-between align-items-center">
+                 <h2>Updates</h2>
+                 <ol>
+                     <li><a href="/">Home</a></li>
+                     <li>Updates from Users</li>
+                 </ol>
+             </div>
+
+         </div>
+     </section><!-- End Breadcrumbs -->
+     <div class="contact-section  m-5"> 
+        <nav aria-label="Page navigation">
+            <ul class="pagination">
+              <li class="page-item"><a class="page-link" href="/timeline?page=<%=page%>">Previous</a></li>
+              <% for (count = 0; count < totalpage; count++){ %>
+              <li class="page-item"><a class="page-link" href="/timeline?page=<%=count%>"><%=count%></a></li> 
+              <%}%>
+              <li class="page-item"><a class="page-link" href="/timeline?page=<%=totalpage%>">Next </a></li>
+            </ul>
+          </nav>
+         <% for(let item of data){%>
+         <div class="card m-2">
+             <div class="card-body">
+                <div class="row">
+                    <div class="col-3">
+                        <img src="/images/<%=item.image%>" width="90" class="m-5 img-thumbnail" alt=" pic of <%=item.name%>"/>
+                    </div> 
+                    <div class="col-9">   
+                        <h5 class="card-title text-capitalize"> <%=item.name%> </h5>
+                        <strong>User:  <%=item.email%> </strong>
+                        <p class="card-text"><strong>Joined recently and says :  </strong>This is a longer card with supporting text below as a natural lead-in to
+                            additional
+                            content. This content is a little bit longer.</p>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit illo explicabo obcaecati quas numquam nulla eligendi quod quidem pariatur, eum placeat ullam expedita quisquam doloremque fuga nihil, dolore quos. Recusandae!
+                            </p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        <button class="btn btn-small bg-warning">Ask / Send message</button>
+                    </div> 
+            </div> 
+             </div>
+         </div>
+         <%}%>
+         <nav aria-label="Page navigation">
+            <ul class="pagination">
+              <li class="page-item"><a class="page-link" href="/timeline?page=<%=page%>">Previous</a></li>
+              <li class="page-item"><a class="page-link" href="/timeline?page=1">1</a></li>
+              <li class="page-item"><a class="page-link" href="/timeline?page=2">2</a></li>
+              <li class="page-item"><a class="page-link" href="/timeline?page=3">3</a></li>
+              <li class="page-item"><a class="page-link" href="/timeline?page=<%=page%>">Next</a></li>
+            </ul>
+          </nav>
+     </div>
+
+ </div>
+ <%- include('./layouts/footer.ejs') %>

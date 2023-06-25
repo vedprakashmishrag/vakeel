@@ -1,0 +1,32 @@
+ <%- include('./layouts/header.ejs') %>
+
+ <%- include('./layouts/navbar.ejs') %>
+ <div class="container">
+     <!-- ======= Breadcrumbs ======= -->
+     <section class="breadcrumbs">
+         <div class="container">
+
+             <div class="d-flex justify-content-between align-items-center">
+                 <h2>Search</h2>
+                 <ol>
+                     <li><a href="/">Home</a></li>
+                     <li>Search Page</li>
+                 </ol>
+             </div>
+
+         </div>
+     </section><!-- End Breadcrumbs -->
+     <div class="contact-section  p-5 m-5">
+         <h1>Search </h1>
+         <div class="form">
+             <form action="/search" method="post">
+                 <div class="form-group row">
+                     <label for="search">Search</label>
+                     <input type="text" class="form-control" id="search" name="search" placeholder="Search">
+                 </div>
+                 <button type="submit" class="btn btn-primary m-2">Submit</button>
+             </form>
+         </div>
+     </div>
+ </div>
+ <%- include('./layouts/footer.ejs') %>
